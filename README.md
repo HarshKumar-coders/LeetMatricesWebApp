@@ -18,7 +18,6 @@ LeetMatrices is a web application that allows users to **track their LeetCode pr
 ## 📸 Screenshot
 
 ![LeetMatrices Screenshot](images/screenshot.png)
-![LeetMatrices Screenshot](images/screenshot2.png)
 
 
 ---
