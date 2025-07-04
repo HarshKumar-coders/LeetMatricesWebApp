@@ -4,9 +4,10 @@
             padding: 0;
             box-sizing: border-box;
             font-family: 'Roboto', sans-serif;
+            
         }
         body {
-            background: linear-gradient(135deg, #667eea, #764ba2);
+            background: linear-gradient(135deg, #657deb, #764ba2);
             color: white;
             min-height: 100vh;
             display: flex;
@@ -38,7 +39,7 @@
         #user_input {
             flex: 1;
             padding: 0.6rem;
-            border-radius: 8px;
+            border-radius: 8.1px;
             border: none;
             outline: none;
         }
