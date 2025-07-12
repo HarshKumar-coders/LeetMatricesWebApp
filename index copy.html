@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Track your LeetCode progress with beautiful statistics and matrices">
+    <meta name="keywords" content="leetcode, coding, programming, statistics, progress tracker">
     <title>Leet Matrices</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="index.css">
@@ -14,9 +16,17 @@
             <p>Enter your name below</p>
             <div class="user_input">
                 <input type="text" placeholder="Enter your username here" id="user_input">
-                <button id="search_button">Search</button>
+                <button id="search_button">
+                    <span class="button-text">Search</span>
+                    <span class="loading-text" style="display: none;">Searching...</span>
+                </button>
             </div>
         </div>
+        
+        <div class="error-message" id="error_message" style="display: none;">
+            <p>User not found or network error. Please try again.</p>
+        </div>
+        
         <div class="stats">
             <div class="loader" id="loader" style="display: none;"></div>
             <div class="progress">
@@ -40,3 +50,4 @@
   <script src="index.js"></script>
 </body>
 </html>
+
