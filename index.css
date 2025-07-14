@@ -43,12 +43,12 @@
             border: 2px solid transparent;
             outline: none;
             transition: all 0.3s ease;
-            background: rgba(255, 255, 255, 0.9);
-            color: #333;
+            background: rgba(245, 243, 243, 0.9);
+            color: #2c2c2c;
         }
         
         #user_input:focus {
-            border-color: #2ebf91;
+            border-color: #2cb98dff;
             box-shadow: 0 0 0 3px rgba(46, 191, 145, 0.1);
         }
         
