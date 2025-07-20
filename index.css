@@ -7,8 +7,8 @@
             
         }
         body {
-            background: linear-gradient(135deg, #6077df, #764ba2);
-            color: white;
+            background: linear-gradient(135deg, #5e77e4, #764ba2);
+            color: rgb(255, 255, 255);
             min-height: 100vh;
             display: flex;
             justify-content: center;
