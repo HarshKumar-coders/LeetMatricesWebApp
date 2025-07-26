@@ -58,15 +58,30 @@ document.addEventListener("DOMContentLoaded", function () {
             };
 
             const response = await fetch(proxyurl + targetUrl, requestOptions);
-            if (!response.ok) {
-                throw new Error("Unable to fetch data");
+            const text = await response.text();
+            let parsedata;
+            try {
+                parsedata = JSON.parse(text);
+            } catch (parseError) {
+                console.error("Failed to parse JSON:", text);
+                alert("Received invalid response from server. Check console for details.");
+                return;
             }
-
-            const parsedata = await response.json();
-            console.log("logging data: ", parsedata);
+            console.log("Full API response:", parsedata);
+            if (!response.ok) {
+                console.error("Network error:", response.status, response.statusText);
+                alert(`Network error: ${response.status} ${response.statusText}`);
+                return;
+            }
+            if (!parsedata.data || !parsedata.data.matchedUser) {
+                alert("User not found or API response format has changed. Check console for details.");
+                console.error("API response missing expected data:", parsedata);
+                return;
+            }
             displayuserdata(parsedata);
         } catch (error) {
-            alert("Error fetching data");
+            console.error("Fetch error:", error);
+            alert("Error fetching data. Check console for details.");
         } finally {
             loader.style.display = "none";
             searchbutton.textContent = "Search";
